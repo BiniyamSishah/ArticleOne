@@ -1,0 +1,34 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  6                                     |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      probesDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+type probes;
+libs ("libsampling.so");
+
+// Fields to be probed. runTime modifiable!
+fields
+(   
+U
+//wallShearStress
+);
+
+// Locations to be probed. runTime modifiable!
+probeLocations
+(
+         (0.001 0.025 0)     // above the ripple_crest;
+         (0.1048 0 0)        // above the ripple_trough;
+
+);
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
