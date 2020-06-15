@@ -1,12 +1,12 @@
 # files with "!"will not be ignored while all other are
-!0_orig 
 !constant 
 !system
-!log.pimpleFoam
 !postProcessing
 !dynamicCode
 !ripple.msh
 # ignore everthing 
+log.pimpleFoam
 *.obj
-*.msh
 *.foam
+[0-100]*
+!0_orig
